@@ -1,9 +1,10 @@
 # HealthMate: Tu Compañero Personalizado para Nutrición y Fitness
 
 <div align="center">
-  
+  *Imagen generada con IA*
+  *El diseño final puede variar*
 ![HealthMate Logo](Designer.png)
-*Imagen generada con IA*
+
 </div>
 
 ## Descripción del Proyecto
