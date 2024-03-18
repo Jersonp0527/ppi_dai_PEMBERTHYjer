@@ -2,7 +2,8 @@
 
 <div align="center">
  
-*Imagen generada con IA*
+*Imagen generada con IA* 
+
 *El diseño final puede variar*
 ![HealthMate Logo](Designer.png)
 
