@@ -33,10 +33,6 @@ En un mundo cada vez más consciente de la salud, HealthMate se destaca como una
 - **Scipy**: Para realizar análisis estadísticos sobre los datos de salud y fitness, como la evaluación de tendencias a lo largo del tiempo.
 - **Geopandas**: Para proporcionar información sobre ubicaciones de interés para la salud, como tiendas de alimentos saludables y gimnasios cercanos.
 
-## Contribución
-
-¡Tu contribución es valiosa! Si tienes ideas para mejorar HealthMate o quieres solucionar algún problema, no dudes en enviar un pull request. Juntos, podemos hacer de HealthMate la mejor herramienta para mejorar la salud y el bienestar.
-
 ---
 
 # Perfil profesional
