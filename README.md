@@ -1,7 +1,11 @@
 # HealthMate: Tu Compañero Personalizado para Nutrición y Fitness
+
 <div align="center">
+  
 ![HealthMate Logo](https://via.placeholder.com/150)
+
 </div>
+
 ## Descripción del Proyecto
 
 HealthMate es una innovadora aplicación diseñada para brindar a los usuarios una experiencia personalizada en su búsqueda de un estilo de vida más saludable. Ofrece planes de dieta y entrenamiento adaptados a los objetivos de fitness individuales y las preferencias de los usuarios. Además, proporciona herramientas de seguimiento de progreso y consejos de salud para garantizar un enfoque integral hacia el bienestar.
