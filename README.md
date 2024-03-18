@@ -2,7 +2,7 @@
 
 <div align="center">
   
-![HealthMate Logo](https://via.placeholder.com/150)
+![HealthMate Logo](Designer.png)
 
 </div>
 
