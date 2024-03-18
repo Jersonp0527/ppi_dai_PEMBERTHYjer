@@ -3,7 +3,7 @@
 <div align="center">
   
 ![HealthMate Logo](Designer.png)
-
+*Imagen generada con IA*
 </div>
 
 ## Descripción del Proyecto
