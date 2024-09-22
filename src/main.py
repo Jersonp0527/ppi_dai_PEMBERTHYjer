@@ -9,6 +9,11 @@ def main(page: ft.Page):
 
     # Función para manejar el cambio de pestaña
     def on_nav_change(e):
+        """on_nav_change permite cambiar entre pestaña de la barra de navegación
+
+        Args:
+            e (_type_): variable de retorno de flet
+        """
         # Cambia el contenido de la vista según la pestaña seleccionada
         if page.navigation_bar.selected_index == 0:
             content.controls = [saved_view()]
