@@ -3,7 +3,7 @@
  
 *Imagen generada con IA* 
 *El diseño final puede variar*
-![HealthMate Logo](Designer.png)
+![HealthMate Logo](assets/preview.png)
 </div>
 
 ## Descripción del Proyecto
