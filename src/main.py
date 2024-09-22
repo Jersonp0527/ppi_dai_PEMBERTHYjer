@@ -1,36 +1,30 @@
 import flet as ft
+from explore import explore_view  # Importa la vista de "Explorar"
+from saved import saved_view      # Importa la vista de "Guardados"
+from settings import settings_view # Importa la vista de "Configuraciones"
 
 def main(page: ft.Page):
-    # Creamos los paneles (vistas) que se mostrarán para cada sección
-    saved_panel = ft.Text("Guardados")
-    explore_panel = ft.Text("Explorar")
-    settings_panel = ft.Text("Configuraciones")
-
     # Contenedor para el contenido que cambiará
-    # Por defecto, mostramos la vista "Explorar"
-    content = ft.Column([explore_panel])
+    content = ft.Column([explore_view()])  # Por defecto, muestra la vista "Explorar"
 
     # Función para manejar el cambio de pestaña
     def on_nav_change(e):
-        # Cambiamos el contenido del panel según la pestaña seleccionada
+        # Cambia el contenido de la vista según la pestaña seleccionada
         if page.navigation_bar.selected_index == 0:
-            content.controls = [saved_panel]
+            content.controls = [saved_view()]
         elif page.navigation_bar.selected_index == 1:
-            content.controls = [explore_panel]
+            content.controls = [explore_view()]
         elif page.navigation_bar.selected_index == 2:
-            content.controls = [settings_panel]
+            content.controls = [settings_view()]
+        page.update()  # Actualiza la página para reflejar el nuevo contenido
 
-        # Actualizamos la página para reflejar los cambios
-        page.update()
+    # Configuración del título de la página
+    page.title = "NavigationBar Example"
 
-    # Configuramos el título de la página
-    page.title = "HealthMate"
-
-    # Creamos la barra de navegación
-    # Iniciamos con la pestaña "Explorar" seleccionada (índice 1)
+    # Configura la barra de navegación
     page.navigation_bar = ft.NavigationBar(
-        selected_index=1,  # Por defecto, seleccionamos la pestaña "Explorar"
-        on_change=on_nav_change,  # Llamamos a la función cuando cambia la pestaña
+        selected_index=1,  # Pestaña "Explorar" seleccionada por defecto
+        on_change=on_nav_change,  # Llama a la función cuando cambie la pestaña
         destinations=[
             ft.NavigationBarDestination(icon=ft.icons.BOOKMARK, label="Guardados"),
             ft.NavigationBarDestination(icon=ft.icons.EXPLORE, label="Explorar"),
@@ -38,8 +32,8 @@ def main(page: ft.Page):
         ]
     )
 
-    # Añadimos el contenedor del contenido dinámico a la página
+    # Añade el contenedor del contenido dinámico a la página
     page.add(content)
 
-# Iniciamos la aplicación llamando a la función principal
+# Inicia la aplicación llamando a la función principal
 ft.app(main)
