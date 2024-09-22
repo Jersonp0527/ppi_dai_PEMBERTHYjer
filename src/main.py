@@ -4,6 +4,11 @@ from saved import saved_view      # Importa la vista de "Guardados"
 from settings import settings_view # Importa la vista de "Configuraciones"
 
 def main(page: ft.Page):
+    """Esta función agrupa los elementos del proyecto
+
+    Args:
+        page (ft.Page): Ventana principal de flet
+    """
     # Contenedor para el contenido que cambiará
     content = ft.Column([explore_view()])  # Por defecto, muestra la vista "Explorar"
 
