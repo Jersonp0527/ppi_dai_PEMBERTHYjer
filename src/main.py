@@ -4,46 +4,32 @@ from saved import saved_view      # Importa la vista de "Guardados"
 from settings import settings_view # Importa la vista de "Configuraciones"
 
 def main(page: ft.Page):
-    """Esta función agrupa los elementos del proyecto
+    """Agrupa los elementos del proyecto y configura la barra de navegación."""
+    # Contenedor para el contenido dinámico (por defecto, la vista "Explorar")
+    content = ft.Column([explore_view(page)])
 
-    Args:
-        page (ft.Page): Ventana principal de flet
-    """
-    # Contenedor para el contenido que cambiará
-    content = ft.Column([explore_view()])  # Por defecto, muestra la vista "Explorar"
-
-    # Función para manejar el cambio de pestaña
     def on_nav_change(e):
-        """on_nav_change permite cambiar entre pestaña de la barra de navegación
-
-        Args:
-            e (_type_): variable de retorno de flet
-        """
-        # Cambia el contenido de la vista según la pestaña seleccionada
+        """Cambia el contenido de la vista según la pestaña seleccionada."""
         if page.navigation_bar.selected_index == 0:
             content.controls = [saved_view()]
         elif page.navigation_bar.selected_index == 1:
-            content.controls = [explore_view()]
+            content.controls = [explore_view(page)]
         elif page.navigation_bar.selected_index == 2:
             content.controls = [settings_view()]
-        page.update()  # Actualiza la página para reflejar el nuevo contenido
+        page.update()
 
-    # Configuración del título de la página
     page.title = "NavigationBar Example"
-
-    # Configura la barra de navegación
     page.navigation_bar = ft.NavigationBar(
-        selected_index=1,  # Pestaña "Explorar" seleccionada por defecto
-        on_change=on_nav_change,  # Llama a la función cuando cambie la pestaña
+        selected_index=1,
+        on_change=on_nav_change,
         destinations=[
-            ft.NavigationBarDestination(icon=ft.icons.BOOKMARK, label="Guardados"),
-            ft.NavigationBarDestination(icon=ft.icons.EXPLORE, label="Explorar"),
-            ft.NavigationBarDestination(icon=ft.icons.SETTINGS, label="Configuraciones"),
+            ft.NavigationBarDestination(icon=ft.Icons.BOOKMARK, label="Guardados"),
+            ft.NavigationBarDestination(icon=ft.Icons.EXPLORE, label="Explorar"),
+            ft.NavigationBarDestination(icon=ft.Icons.SETTINGS, label="Configuraciones"),
         ]
     )
 
-    # Añade el contenedor del contenido dinámico a la página
     page.add(content)
 
-# Inicia la aplicación llamando a la función principal
-ft.app(main)
+if __name__ == "__main__":
+    ft.app(main)
