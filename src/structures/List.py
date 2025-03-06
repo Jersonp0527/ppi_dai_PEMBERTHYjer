@@ -3,17 +3,17 @@ import flet as ft
 def ListView():
     # Lista para almacenar los contenedores creados
     containers = []
-
+    
     # Función para crear un contenedor con el valor ingresado
     def create_container(value: str):
         return ft.Container(
-            content=ft.Text(value),
+            content=ft.Text(value, weight=ft.FontWeight.BOLD),
             alignment=ft.alignment.center,
             width=50,
             height=50,
             border_radius=50,
-            bgcolor=ft.colors.WHITE,  # Color de fondo por defecto
-            border=ft.border.all(1, color=ft.Colors.BLACK),
+            bgcolor=ft.Colors.WHITE,  # Color de fondo por defecto
+            border=ft.border.all(2, color=ft.Colors.BLACK),
         )
 
     # Función que se ejecuta al presionar "Agregar"
@@ -47,9 +47,9 @@ def ListView():
         for container in containers:
             # Si coincide el valor, se resalta en amarillo, de lo contrario se restaura el color azul
             if container.content.value.lower() == search_value:
-                container.bgcolor = ft.colors.GREEN
+                container.bgcolor = ft.Colors.GREEN
             else:
-                container.bgcolor = ft.colors.WHITE
+                container.bgcolor = ft.Colors.WHITE
         e.control.page.update()
 
     # Función que limpia (elimina) todos los contenedores de la lista
