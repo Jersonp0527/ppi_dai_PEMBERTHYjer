@@ -2,7 +2,8 @@ import flet as ft
 
 def ListView():
     # Lista para almacenar los contenedores creados
-    
+    containers = []
+
     # Función para crear un contenedor con el valor ingresado
     def create_container(value: str):
         return ft.Container(
