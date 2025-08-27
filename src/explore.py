@@ -4,7 +4,7 @@ import os
 def explore_view(page):
     """Retorna el contenido de la vista "Explorar", que contiene una lista de estructuras."""
     # Se usa theme_style con el valor "headline1"
-    title = ft.Text("Explorar", theme_style="headline1")
+    title = ft.Text("Explorar")
     return ft.Column([title, explore_list(page)])
 
 def explore_list(page):
